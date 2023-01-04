@@ -1,4 +1,5 @@
 # SimpleMap
 
 ## How to run
-`docker-compose up`
+- Run `docker-compose up`
+- Open `localhost:8080`
