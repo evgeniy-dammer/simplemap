@@ -1,0 +1,19 @@
+version: "3"
+services:
+  front:
+    container_name: front
+    build: front/
+    restart: always
+    command: ./front
+    ports:
+      - "8080:8080"
+    depends_on:
+      - tileserver
+
+  tileserver:
+    container_name: tileserver
+    build: tileserver/
+    restart: always
+    command: ./tileserver
+    ports:
+      - "8082:8082"

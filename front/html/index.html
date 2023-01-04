@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>SimpleMap</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+<div id='map' style="height: 860px"></div>
+<script type="text/javascript">
+	var map = L.map('map').setView([40, -110], 5);
+
+	L.tileLayer('http://localhost:8082/tiles/{z}/{y}/{x}', {
+		maxZoom: 18,
+		attribution: '(C) 2016 dfvjdfvjdfv'
+	}).addTo(map);
+</script>
+</body>
+</html>
